@@ -39,6 +39,7 @@ body {
 section {
     min-height: 100vh;
     padding-top: 71px;
+    display: table;
     padding-left: calc(0.3125rem + ((1vw - 3.2px) * 1.3393));
     padding-right: calc(0.3125rem + ((1vw - 3.2px) * 1.3393));
 }
@@ -96,11 +97,7 @@ header.sticky {
             }
         }
     }
-    .slider_shape { 
-        // background-image: url(../images/circle_shape.svg);
-        // background-position: center bottom;
-        // background-repeat: no-repeat;
-        // background-size: 100%;
+    .slider_shape {
         position: absolute;
         width: 100%;
         left: 0;
@@ -120,7 +117,8 @@ header.sticky {
     .slider_device {
         z-index: 3;
         position: absolute;
-
+        right: 50%;
+        bottom: 0px;
     }
     
 }
