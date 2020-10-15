@@ -1,0 +1,137 @@
+@import "custom_var";
+@import "../node_modules/bootstrap-scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+$fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts/";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid.scss";
+
+body {
+    background-color: $white-color;
+    font-family: 'Roboto', sans-serif;
+}
+.bg_white {
+    background-color: $white-color;
+}
+.bg_blue {
+    background-color: $theme-blue;
+}
+.menu li {
+    padding: 10px 10px 0;
+}
+.menu_link {
+    color: $theme-blue !important;
+    border-bottom: solid 3px $white-color;
+    padding: 17px 0px !important;
+    -webkit-transition: all 0.0s ease;
+    transition: all 0.0s ease;
+    &:hover {
+        border-bottom: solid 3px $theme-red;
+        -webkit-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+}
+.contact_btn {
+    color: $theme-blue !important;
+    &:hover {
+        color: $white-color !important;
+    }
+}
+section {
+    min-height: 100vh;
+    padding-top: 71px;
+    padding-left: calc(0.3125rem + ((1vw - 3.2px) * 1.3393));
+    padding-right: calc(0.3125rem + ((1vw - 3.2px) * 1.3393));
+}
+header {
+    height: 71px;
+    background-color: $white-color;
+}
+.logo {
+    width: 160px;
+    transition: width .5s;
+}
+header {
+    position: fixed;
+    width: 100%;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    z-index: 9999;
+    top: 0;
+}
+header.sticky {
+    height: 71px;
+    background-color: rgba($color: $white, $alpha: 1);
+    -webkit-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.1);
+    -moz-box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 10px 0px rgba(0,0,0,0.1);
+    text-align: left;
+    -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+    .logo {
+        width: 100px;
+    }
+}
+.slider {
+    h1 {
+        font-size: 80px;
+        font-weight: 300;
+        color: $white-color;
+        margin-top: $margin - 12rem;
+        line-height: 80px;
+    }
+    .downloadBtnPart {
+        margin-top: $margin - 17rem;
+        display: inline-flex;
+        .download_btn {
+            border-radius: 100px;
+            text-transform: uppercase;
+            padding: 7px 20px;
+            font-weight: 500;
+        }
+        .btnArrow {
+            margin: 5px 0 0 15px;
+            i {
+                font-size: 34px;
+                color: $theme-red;
+            }
+        }
+    }
+    .slider_shape { 
+        // background-image: url(../images/circle_shape.svg);
+        // background-position: center bottom;
+        // background-repeat: no-repeat;
+        // background-size: 100%;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: -1px;
+        z-index: 2;
+    }
+    .sliderLeft {
+        z-index: 2;
+
+    }
+    .sliderRight {
+        display: flex;
+    }
+    .slider_img {
+        z-index: 1;
+    }
+    .slider_device {
+        z-index: 3;
+        position: absolute;
+
+    }
+    
+}
+
+
+
+
+
+// Responsive css start
+@media (min-width: 320px) {
+    h1 {
+        font-size: calc(1.25rem + ((1vw - 3.2px) * 5.7361));
+    }
+}
